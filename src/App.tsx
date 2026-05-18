@@ -2,9 +2,9 @@ import Sidebar from "@/components/Sidebar";
 import TodaySection from "@/components/TodaySection";
 import StatsSection from "@/components/StatsSection";
 
-export default function Home() {
+export default function App() {
   return (
-    <div className="flex flex-col h-full bg-white" style={{ fontFamily: "var(--font-inter), system-ui, sans-serif" }}>
+    <div className="flex flex-col h-full bg-white" style={{ fontFamily: "'Inter', system-ui, sans-serif" }}>
       {/* Top Bar */}
       <header className="flex items-center justify-between bg-black px-5 h-14 flex-shrink-0">
         <div className="flex items-center gap-2.5">
@@ -12,7 +12,7 @@ export default function Home() {
             <span className="text-white text-sm font-semibold">r</span>
           </div>
           <div className="flex flex-col">
-            <span className="text-white text-[13px] font-semibold leading-[18px]">Robson&apos;s Community</span>
+            <span className="text-white text-[13px] font-semibold leading-[18px]">Robson's Community</span>
             <span className="text-neutral-500 text-[12px] leading-4">Admin</span>
           </div>
         </div>
