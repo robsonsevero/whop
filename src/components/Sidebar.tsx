@@ -1,21 +1,21 @@
 const ChevronDown = () => (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="flex-shrink-0">
-    <path d="M6 9l6 6 6-6" stroke="#6b7280" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M6 9l6 6 6-6" stroke="#9ca3af" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
 
 const ChevronLeft = () => (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="flex-shrink-0">
-    <path d="M15 18l-6-6 6-6" stroke="#6b7280" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M15 18l-6-6 6-6" stroke="#9ca3af" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
 
 function SectionHeader({ icon, label, collapsed }: { icon: React.ReactNode; label: string; collapsed?: boolean }) {
   return (
-    <button className="flex items-center justify-between w-full px-4 py-2 hover:bg-white/5 transition-colors">
+    <button className="flex items-center justify-between w-full px-4 py-2 hover:bg-neutral-50 transition-colors">
       <div className="flex items-center gap-2.5">
-        <span className="text-neutral-400 flex-shrink-0">{icon}</span>
-        <span className="text-[13px] font-medium text-neutral-300">{label}</span>
+        <span className="text-neutral-500 flex-shrink-0">{icon}</span>
+        <span className="text-[13px] font-medium text-neutral-700">{label}</span>
       </div>
       {collapsed ? <ChevronLeft /> : <ChevronDown />}
     </button>
@@ -24,8 +24,8 @@ function SectionHeader({ icon, label, collapsed }: { icon: React.ReactNode; labe
 
 function NavItem({ label, active, dot }: { label: string; active?: boolean; dot?: boolean }) {
   return (
-    <div className="flex items-center ml-[22px] border-l border-neutral-700 pl-4 pr-3 py-[5px]">
-      <div className={`flex-1 flex items-center justify-between rounded-md px-2 py-0.5 ${active ? "bg-white" : ""}`}>
+    <div className="flex items-center ml-[22px] border-l border-neutral-200 pl-4 pr-3 py-[5px]">
+      <div className={`flex-1 flex items-center justify-between rounded-md px-2 py-0.5 ${active ? "bg-neutral-100" : ""}`}>
         <span className={`text-[13px] ${active ? "text-neutral-900 font-medium" : "text-neutral-500"}`}>{label}</span>
         {dot && (
           <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center flex-shrink-0">
@@ -41,15 +41,15 @@ function NavItem({ label, active, dot }: { label: string; active?: boolean; dot?
 
 export default function Sidebar() {
   return (
-    <aside className="w-[280px] flex-shrink-0 bg-[#111111] flex flex-col overflow-y-auto">
+    <aside className="w-[280px] flex-shrink-0 bg-white border-r border-neutral-200 flex flex-col overflow-y-auto">
       {/* Search */}
       <div className="px-3 pt-3 pb-2">
-        <div className="flex items-center gap-2 bg-neutral-800 rounded-lg px-3 py-2">
+        <div className="flex items-center gap-2 bg-neutral-100 rounded-lg px-3 py-2">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-            <circle cx="11" cy="11" r="8" stroke="#6b7280" strokeWidth="1.5" />
-            <path d="M21 21l-4.35-4.35" stroke="#6b7280" strokeWidth="1.5" strokeLinecap="round" />
+            <circle cx="11" cy="11" r="8" stroke="#9ca3af" strokeWidth="1.5" />
+            <path d="M21 21l-4.35-4.35" stroke="#9ca3af" strokeWidth="1.5" strokeLinecap="round" />
           </svg>
-          <span className="text-[13px] text-neutral-500">Search</span>
+          <span className="text-[13px] text-neutral-400">Search</span>
         </div>
       </div>
 
